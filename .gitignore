@@ -6,3 +6,4 @@
 .venv1
 .idea
 *.egg-info
+*.pyc
