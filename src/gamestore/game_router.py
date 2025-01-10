@@ -49,8 +49,8 @@ def read_game(game_id: int = Path()):
     response_model=Game
 )
 def update_game(
-        game: UpdateGame = Body(),
-        game_id: int = Path()
+    game: UpdateGame = Body(),
+    game_id: int = Path()
 ):
     game_orig = read_game(game_id)
     for k, v in game.model_dump().items():

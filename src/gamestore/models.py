@@ -1,5 +1,3 @@
-from email.policy import default
-
 from pydantic import BaseModel, Field
 
 class CreateGame(BaseModel):
