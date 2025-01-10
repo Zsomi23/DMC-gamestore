@@ -1,4 +1,4 @@
 # Gamestore
 
 
-A webapp with SQLife database and Fastapi REST api
+A webapp with SQLite database and Fastapi REST api
