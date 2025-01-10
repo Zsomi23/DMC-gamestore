@@ -12,20 +12,20 @@ logging.basicConfig(level=logging.DEBUG)
 
 __version__ = '0.1.0'
 
-def main():
-    logger.info('Starting GameStore %s', __version__)
-
-    app = FastAPI(
+app = FastAPI(
         title='GameStore',
         version=__version__
     )
 
-    app.include_router(gr)
+app.include_router(gr)
 
-    @app.get('/')
-    def docs():
-        return RedirectResponse(url='/docs')
+@app.get('/')
+def docs():
+    return RedirectResponse(url='/docs')
 
+
+def main():
+    logger.info('Starting GameStore %s', __version__)
     uvicorn.run(app, log_config=None)
 
 
