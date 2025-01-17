@@ -10,3 +10,12 @@ optional-dependencies.test = {file = ["requirments_test.txt"]}
 
 [project.scripts]
 gamestore = "gamestore.__main__:main"
+
+[tool.pytest.ini_options]
+log_level = "DEBUG"
+log_cli = true
+addopts = '''
+    -v
+    --cov=gamestore
+    --cov-report html:testresults/htmlcov
+    '''
